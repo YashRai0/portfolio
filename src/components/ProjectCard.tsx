@@ -66,7 +66,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       {isTopProject && getCaseStudy(project.title)}
 
       <div className="project-stack mt-4">
-        {project.stack.map((tag) => (
+        {(project.stack || []).map((tag) => (
           <span key={tag} className="stack-tag">
             {tag}
           </span>

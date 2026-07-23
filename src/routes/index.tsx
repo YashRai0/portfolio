@@ -161,7 +161,7 @@ function PortfolioHome() {
                 <div className="skill-category-icon select-none">{category.icon}</div>
                 <h3 className="text-white select-none">{category.category}</h3>
                 <div className="skill-pills">
-                  {category.skills.map((skill: string) => (
+                  {(category.skills || []).map((skill: string) => (
                     <span 
                       key={skill} 
                       className={`skill-pill select-all ${category.accent ? "cyan" : ""}`}
