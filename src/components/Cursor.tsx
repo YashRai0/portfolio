@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Cursor() {
-  const [active, setActive] = useState(false);
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const ringRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Apply custom cursor only on devices with fine pointer controls and without reduced motion preferences
+    setMounted(true);
+
     const isFinePointer = window.matchMedia("(pointer: fine)").matches;
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -12,11 +15,10 @@ export default function Cursor() {
       return;
     }
 
-    setActive(true);
     document.body.classList.add("custom-cursor-active");
 
-    const cursor = document.getElementById("cursor");
-    const ring = document.getElementById("cursor-ring");
+    const cursor = cursorRef.current;
+    const ring = ringRef.current;
 
     if (!cursor || !ring) return;
 
@@ -61,12 +63,17 @@ export default function Cursor() {
     };
   }, []);
 
-  if (!active) return null;
+  // SSR protection and client capability checks
+  if (!mounted) return null;
+  
+  const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!isFinePointer || prefersReducedMotion) return null;
 
   return (
     <>
-      <div id="cursor" aria-hidden="true" />
-      <div id="cursor-ring" aria-hidden="true" />
+      <div ref={cursorRef} id="cursor" aria-hidden="true" />
+      <div ref={ringRef} id="cursor-ring" aria-hidden="true" />
     </>
   );
 }
