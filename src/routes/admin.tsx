@@ -52,14 +52,14 @@ function AdminApp() {
     // Check initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
-      if (session) checkAdminStatus(session.user.email);
+      if (session) checkAdminStatus();
       else setLoading(false);
     });
 
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
-      if (session) checkAdminStatus(session.user.email);
+      if (session) checkAdminStatus();
       else {
         setIsAdmin(false);
         setLoading(false);
@@ -69,26 +69,21 @@ function AdminApp() {
     return () => subscription.unsubscribe();
   }, []);
 
-  const checkAdminStatus = async (userEmail: string | undefined) => {
-    if (!userEmail) {
-      setIsAdmin(false);
-      setLoading(false);
-      return;
-    }
+  const checkAdminStatus = async () => {
     try {
-      // Query the is_admin security function or direct allowlist check
-      const { data, error } = await supabase
-        .from("admin_emails")
-        .select("email")
-        .eq("email", userEmail)
-        .maybeSingle();
+      // Call the is_admin SECURITY DEFINER RPC function
+      const { data, error } = await supabase.rpc("is_admin");
 
-      if (data) {
+      if (data === true) {
         setIsAdmin(true);
         loadDashboardData();
       } else {
         setIsAdmin(false);
-        toast.error("Access Denied: You are not authorized as an administrator.");
+        // Only trigger access error toast if user is signed in but is not admin
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session) {
+          toast.error("Access Denied: You are not authorized as an administrator.");
+        }
       }
     } catch (err) {
       console.error("Admin verification error:", err);

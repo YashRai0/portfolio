@@ -128,22 +128,22 @@ function PortfolioHome() {
             */}
             <div className="about-stats reveal">
               <div className="stat-card">
-                <div className="stat-number">5th</div>
-                <div className="stat-label">Semester · BCA</div>
+                <div className="stat-number">{projects.length}</div>
+                <div className="stat-label">Projects Built</div>
               </div>
               <div className="stat-card">
-                <div className="stat-number">
-                  {completedCount} Shipped, {inProgressCount} Building
+                <div className="stat-number text-sm md:text-base">
+                  <span className="text-[var(--cyan)]">{completedCount}</span> Shipped, <span className="text-[var(--purple)]">{inProgressCount}</span> Building
                 </div>
-                <div className="stat-label">Defensible Project Count</div>
+                <div className="stat-label">Project Status</div>
               </div>
               <div className="stat-card">
                 <div className="stat-number">{siteContent.stats?.tech_stacks || "3+"}</div>
                 <div className="stat-label">Tech Stacks</div>
               </div>
               <div className="stat-card">
-                <div className="stat-number">∞</div>
-                <div className="stat-label">Things to Learn</div>
+                <div className="stat-number">{siteContent.stats?.semester || "5th"}</div>
+                <div className="stat-label">BCA Semester</div>
               </div>
             </div>
           </div>

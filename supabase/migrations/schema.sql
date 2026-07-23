@@ -6,9 +6,6 @@ CREATE TABLE IF NOT EXISTS public.admin_emails (
 
 ALTER TABLE public.admin_emails ENABLE ROW LEVEL SECURITY;
 
--- Allow public read of admin emails (so client can check is_admin locally if needed)
-CREATE POLICY "public read admin emails" ON public.admin_emails FOR SELECT USING (true);
-
 -- Insert Yash's admin email
 INSERT INTO public.admin_emails (email) VALUES ('yashrai6635@gmail.com') ON CONFLICT DO NOTHING;
 
@@ -129,3 +126,58 @@ VALUES
 ('2025', 'BCA · 5th Semester', 'Python, ML Libraries, Power Automate · IBM SkillsBuild GenAI Badge', 2),
 ('2024', 'Deep-Dived into Web Dev', 'React, Node.js, APIs · Started rapid prototyping with Lovable & Cursor', 3),
 ('2023', 'BCA · 1st Year · United Institute of Management, FUGS', 'C, HTML, CSS, Python fundamentals · First programs, first bugs 🐛', 4);
+
+-- ══ 6. AUTOMATED DYNAMIC STATS TRIGGERS ══
+
+-- Force calculation function for site_content stats JSON
+CREATE OR REPLACE FUNCTION public.force_site_content_stats()
+RETURNS TRIGGER AS $$
+DECLARE
+  total_count INT;
+  completed_count INT;
+  in_progress_count INT;
+BEGIN
+  -- Compute correct dynamic counts
+  SELECT count(*) INTO total_count FROM public.projects;
+  SELECT count(*) FILTER (WHERE status = 'completed') INTO completed_count FROM public.projects;
+  SELECT count(*) FILTER (WHERE status = 'in_progress') INTO in_progress_count FROM public.projects;
+
+  IF NEW.stats IS NULL THEN
+    NEW.stats := '{}'::jsonb;
+  END IF;
+
+  -- Overwrite values with correct live calculations
+  NEW.stats := jsonb_set(NEW.stats, '{projects_built}', to_jsonb(total_count::text));
+  NEW.stats := jsonb_set(NEW.stats, '{projects_completed}', to_jsonb(completed_count::text));
+  NEW.stats := jsonb_set(NEW.stats, '{projects_in_progress}', to_jsonb(in_progress_count::text));
+
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- Site content BEFORE trigger
+CREATE OR REPLACE TRIGGER trigger_force_site_content_stats
+BEFORE INSERT OR UPDATE ON public.site_content
+FOR EACH ROW
+EXECUTE FUNCTION public.force_site_content_stats();
+
+-- Trigger update helper function when projects change
+CREATE OR REPLACE FUNCTION public.update_site_stats()
+RETURNS TRIGGER AS $$
+BEGIN
+  -- Touch site_content to trigger its BEFORE update handler
+  UPDATE public.site_content
+  SET updated_at = now()
+  WHERE id = 'main';
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- Projects AFTER trigger
+CREATE OR REPLACE TRIGGER trigger_update_site_stats
+AFTER INSERT OR UPDATE OR DELETE ON public.projects
+FOR EACH ROW
+EXECUTE FUNCTION public.update_site_stats();
+
+-- Seed initial site_content stats trigger computation
+UPDATE public.site_content SET updated_at = now() WHERE id = 'main';
