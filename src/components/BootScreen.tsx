@@ -27,32 +27,48 @@ export default function BootScreen() {
 
     setHidden(false);
 
-    let lineIdx = 0;
-    const addLine = () => {
-      if (lineIdx < bootScript.length) {
-        setLines((prev) => [...prev, bootScript[lineIdx]]);
-        lineIdx++;
-        setTimeout(addLine, 150);
+    let active = true;
+    const timerIds: any[] = [];
+    let progressInterval: any = null;
+
+    const addLine = (idx: number) => {
+      if (!active) return;
+      if (idx < bootScript.length) {
+        setLines((prev) => [...prev, bootScript[idx]]);
+        const nextTimer = setTimeout(() => addLine(idx + 1), 150);
+        timerIds.push(nextTimer);
       } else {
         // Run progress bar loading
-        setTimeout(() => {
+        const startProgressTimer = setTimeout(() => {
+          if (!active) return;
           let currentProgress = 0;
-          const progInterval = setInterval(() => {
+          progressInterval = setInterval(() => {
+            if (!active) return;
             currentProgress += 10;
             setProgress(currentProgress);
             if (currentProgress >= 100) {
-              clearInterval(progInterval);
-              setTimeout(() => {
+              clearInterval(progressInterval);
+              const hideTimer = setTimeout(() => {
+                if (!active) return;
                 setHidden(true);
                 sessionStorage.setItem("boot_screen_shown", "true");
               }, 300);
+              timerIds.push(hideTimer);
             }
           }, 40);
         }, 150);
+        timerIds.push(startProgressTimer);
       }
     };
 
-    setTimeout(addLine, 100);
+    const initialTimer = setTimeout(() => addLine(0), 100);
+    timerIds.push(initialTimer);
+
+    return () => {
+      active = false;
+      timerIds.forEach(clearTimeout);
+      if (progressInterval) clearInterval(progressInterval);
+    };
   }, []);
 
   if (hidden) return null;
@@ -61,9 +77,11 @@ export default function BootScreen() {
     <div id="boot" className={hidden ? "hidden" : ""} aria-hidden="true">
       <div id="boot-lines">
         {lines.map((line, idx) => (
-          <div key={idx} className={`boot-line ${line.type}`} style={{ opacity: 1 }}>
-            {line.text}
-          </div>
+          line && (
+            <div key={idx} className={`boot-line ${line.type || ""}`} style={{ opacity: 1 }}>
+              {line.text}
+            </div>
+          )
         ))}
       </div>
       <div 
