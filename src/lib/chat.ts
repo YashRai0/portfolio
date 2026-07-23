@@ -12,7 +12,7 @@ Here are the facts about Yash:
 - LinkedIn: linkedin.com/in/yash-rai-1a218433b
 - Education: BCA student at United Institute of Management, FUGS (5th Semester)
 - Projects:
-  1. Resume Optimizer (React + Node.js + Claude API + Stripe + Clerk) - AI-powered resume ATS optimizer (completed and live at https://resumeai4u.vercel.app/).
+  1. Resume Optimizer (React + Node.js + Groq API + Razorpay + Clerk) - AI-powered resume ATS optimizer with landing page, Clerk auth, Groq AI optimization dashboard, pricing tables, and Razorpay integration. Completed and live at https://resumeai4u.vercel.app/.
   2. README Auto-Generator (React + Tailwind + Claude API + Lovable) - Pastes code and generates READMEs.
   3. AI MCQ Generator (React + Anthropic API + Vite) - Study tool used by classmates before exams.
   4. Sales Flow Automation (Power Automate + SharePoint + Excel) - Completed Excel reporting automation.

@@ -70,7 +70,7 @@ CREATE POLICY "admin write projects" ON public.projects FOR ALL TO authenticated
 -- Insert projects seed data
 INSERT INTO public.projects (title, description, stack, live_url, github_url, status, position)
 VALUES
-('Resume Optimizer', 'AI-powered resume analyzer built with Claude API. Upload a resume, paste a JD, and get instant optimization suggestions, ATS score, and tailored improvements.', ARRAY['React', 'Node.js', 'Claude API', 'Stripe', 'Clerk'], 'https://resumeai4u.vercel.app/', 'https://github.com/YashRai0/resume-optimizer', 'completed', 1),
+('Resume Optimizer', 'AI-powered resume ATS optimizer built with Groq, Clerk, and Razorpay. Upload a resume, analyze it against a job description, and get instant scoring and tailored suggestions.', ARRAY['React', 'Node.js', 'Groq API', 'Razorpay', 'Clerk'], 'https://resumeai4u.vercel.app/', 'https://github.com/YashRai0/resume-optimizer', 'completed', 1),
 ('README Auto-Generator', 'Paste your project code or describe it — the app generates a production-ready README with badges, setup instructions, and API docs using Claude AI.', ARRAY['React', 'Tailwind', 'Claude API', 'Lovable'], '#', '#', 'completed', 2),
 ('AI MCQ Generator', 'Built for BCA exam prep — paste any topic and instantly generate MCQ questions with explanations. Used by classmates before OS & SE exams.', ARRAY['React', 'Anthropic API', 'Vite'], '#', '#', 'concept', 3),
 ('Sales Flow Automation', 'Power Automate flow that reads Excel data, filters based on criteria, formats an HTML table, and emails a daily sales report — zero manual effort.', ARRAY['Power Automate', 'SharePoint', 'Excel'], '#', '', 'completed', 4),

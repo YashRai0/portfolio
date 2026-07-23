@@ -12,8 +12,8 @@ export const mockProjects = [
   {
     id: "proj-1",
     title: "Resume Optimizer",
-    description: "AI-powered resume analyzer built with Claude API. Upload a resume, paste a JD, and get instant optimization suggestions, ATS score, and tailored improvements.",
-    stack: ["React", "Node.js", "Claude API", "Stripe", "Clerk"],
+    description: "AI-powered resume ATS optimizer built with Groq, Clerk, and Razorpay. Upload a resume, analyze it against a job description, and get instant scoring and tailored suggestions.",
+    stack: ["React", "Node.js", "Groq API", "Razorpay", "Clerk"],
     live_url: "https://resumeai4u.vercel.app/",
     github_url: "https://github.com/YashRai0/resume-optimizer",
     status: "completed",
