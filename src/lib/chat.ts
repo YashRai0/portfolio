@@ -31,7 +31,7 @@ export const askPortfolioAI = createServerFn({ method: "POST" })
     // ── 1. IF GEMINI API KEY IS CONFIGURED (PRIORITY) ──
     if (geminiApiKey && !geminiApiKey.startsWith("sk-...") && geminiApiKey !== "placeholder") {
       try {
-        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiApiKey}`, {
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${geminiApiKey}`, {
           method: "POST",
           headers: {
             "content-type": "application/json",
