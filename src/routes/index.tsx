@@ -113,6 +113,19 @@ function PortfolioHome() {
                 When I'm not coding, I'm learning OS internals, debugging algorithms, or crafting LinkedIn posts about what I've built.
               </p>
             </div>
+            {/* 
+              ACCESSIBILITY TIP: To add a profile photo or visual avatar in the future, 
+              you can insert an image element here. Always provide a descriptive alt 
+              attribute for screen readers, for example:
+              
+              <div className="about-avatar reveal flex justify-center items-center">
+                <img 
+                  src="/assets/yash-avatar.jpg" 
+                  alt="Yash Rai - React Developer and BCA student at UIM" 
+                  className="w-48 h-48 rounded-full border-2 border-[var(--cyan)]/40 object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            */}
             <div className="about-stats reveal">
               <div className="stat-card">
                 <div className="stat-number">5th</div>
