@@ -45,17 +45,15 @@ body {
 }
 
 /* Hide cursor on non-touch devices with fine pointers */
-@media (pointer: fine) {
-  body.custom-cursor-active {
-    cursor: none;
-  }
-  body.custom-cursor-active a, 
-  body.custom-cursor-active button, 
-  body.custom-cursor-active [role="button"],
-  body.custom-cursor-active input,
-  body.custom-cursor-active textarea {
-    cursor: none;
-  }
+body.custom-cursor-active {
+  cursor: none;
+}
+body.custom-cursor-active a, 
+body.custom-cursor-active button, 
+body.custom-cursor-active [role="button"],
+body.custom-cursor-active input,
+body.custom-cursor-active textarea {
+  cursor: none;
 }
 
 /* ── BOOT SCREEN ── */
@@ -84,13 +82,8 @@ body {
 #boot-bar { height: 100%; background: var(--cyan); border-radius: 2px; width: 0%; transition: width 0.1s linear; }
 
 /* ── CURSOR ── */
-#cursor { width:12px;height:12px;background:var(--cyan);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference; will-change: transform; display: none; }
-#cursor-ring { width:36px;height:36px;border:1px solid rgba(0,245,255,0.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998; will-change: transform; display: none; }
-@media (pointer: fine) {
-  body.custom-cursor-active #cursor, body.custom-cursor-active #cursor-ring {
-    display: block;
-  }
-}
+#cursor { width:12px;height:12px;background:var(--cyan);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference; will-change: transform; }
+#cursor-ring { width:36px;height:36px;border:1px solid rgba(0,245,255,0.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998; will-change: transform; }
 
 /* ── NAV ── */
 nav { position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(5,10,24,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border); }
