@@ -73,7 +73,7 @@ export default function ChatWidget() {
           <div className="chat-avatar">🤖</div>
           <div className="chat-header-info">
             <h4>Ask Yash's AI</h4>
-            <p>Online · Powered by Claude</p>
+            <p>Online · Portfolio Assistant</p>
           </div>
           <button id="chat-close" onClick={() => setIsOpen(false)} aria-label="Close AI assistant chat">✕</button>
         </div>
