@@ -61,7 +61,7 @@ export default function Cursor() {
       window.removeEventListener("mouseover", handleMouseOver);
       cancelAnimationFrame(animationId);
     };
-  }, []);
+  }, [mounted]);
 
   // SSR protection and client capability checks
   if (!mounted) return null;
