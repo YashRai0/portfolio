@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
 
 export function CustomCursor() {
   const [isSupported, setIsSupported] = useState(false);
@@ -23,10 +22,14 @@ export function CustomCursor() {
     const isFinePointer = pointerMedia.matches;
     const isReducedMotion = motionMedia.matches;
 
-    if (isFinePointer && !isReducedMotion) {
+    if (!isFinePointer || isReducedMotion) {
+      return;
+    }
+
+    queueMicrotask(() => {
       setIsSupported(true);
       document.body.style.cursor = "none";
-    }
+    });
 
     const handleMouseMove = (e: MouseEvent) => {
       mouseX.current = e.clientX;

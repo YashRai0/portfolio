@@ -70,7 +70,7 @@ export function ChatWidget() {
 
       const data = await response.json();
       setMessages((prev) => [...prev, { role: "bot", content: data.reply || "I'm sorry, I couldn't process that right now." }]);
-    } catch (error) {
+    } catch {
       setMessages((prev) => [...prev, { role: "bot", content: "Oops! Something went wrong. Please try again later or email Yash directly." }]);
     } finally {
       setIsLoading(false);
@@ -102,7 +102,7 @@ export function ChatWidget() {
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-white/[0.07] bg-white/[0.02]">
               <div>
-                <h3 className="font-sans font-semibold text-[#F0F2F8] text-sm">Ask Yash's AI</h3>
+                <h3 className="font-sans font-semibold text-[#F0F2F8] text-sm">Ask Yash&apos;s AI</h3>
                 <div className="flex items-center gap-2 mt-1">
                   <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="font-mono text-xs text-[#4A5068]">Online · Portfolio Assistant</span>

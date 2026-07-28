@@ -52,7 +52,7 @@ export default function Hero() {
           >
             <div className="flex items-center space-x-3">
               <span className="font-mono text-sm text-[#9CA3AF] tracking-wider">
-                // Full Stack & AI Engineering
+                {"// Full Stack & AI Engineering"}
               </span>
             </div>
 
@@ -77,7 +77,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-[#9CA3AF] leading-relaxed max-w-2xl">
-              I'm Yash Rai — an AI Product Engineer building production-ready SaaS applications with React, TypeScript, Node.js, Generative AI, Docker, and CI/CD. Creator of ResumeAI4U.
+              I&apos;m Yash Rai — an AI Product Engineer building production-ready SaaS applications with React, TypeScript, Node.js, Generative AI, Docker, and CI/CD. Creator of ResumeAI4U.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">

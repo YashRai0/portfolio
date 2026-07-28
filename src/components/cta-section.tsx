@@ -18,7 +18,6 @@ function LinkedInIcon({ size = 24 }: { size?: number }) {
     </svg>
   );
 }
-import { cn } from "@/lib/utils";
 
 export function CtaSection() {
   return (
@@ -36,12 +35,12 @@ export function CtaSection() {
           viewport={{ once: true, margin: "-50px" }}
           className="mb-8"
         >
-          <span className="font-mono text-[#4A5068] mb-6 block">// 08 — Contact</span>
+          <span className="font-mono text-[#4A5068] mb-6 block">{"// 08 — Contact"}</span>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#F0F2F8] font-sans mb-8 tracking-tight">
-            Let's <span className="text-[#00E5FF]">build</span> something together
+            Let&apos;s <span className="text-[#00E5FF]">build</span> something together
           </h2>
           <p className="text-lg md:text-xl text-[#4A5068] font-sans max-w-2xl mx-auto leading-relaxed">
-            If you're building something with AI, need a React frontend, or want to collaborate on a product — let's talk. I respond within 24 hours.
+            If you&apos;re building something with AI, need a React frontend, or want to collaborate on a product — let&apos;s talk. I respond within 24 hours.
           </p>
         </motion.div>
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 const steps = [
   {
@@ -53,7 +52,7 @@ export function Process() {
     <section className="w-full py-24 bg-[#050709] px-4 md:px-8 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="mb-20">
-          <p className="font-mono text-[#4A5068] mb-4">// 04 — Process</p>
+          <p className="font-mono text-[#4A5068] mb-4">{"// 04 — Process"}</p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#F0F2F8]">
             How I <span className="text-[#00E5FF]">work</span>
           </h2>

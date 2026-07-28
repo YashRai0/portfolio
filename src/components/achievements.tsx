@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Rocket, Zap, BrainCircuit, Cloud, BookOpen, GraduationCap } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const stats = [
   { value: "2", label: "Live Production AI SaaS Products" },
@@ -57,7 +56,7 @@ export default function Achievements() {
             className="flex items-center gap-4 mb-4"
           >
             <span className="font-mono text-sm text-[#3B82F6] bg-[#3B82F6]/10 px-3 py-1 rounded-full border border-[#3B82F6]/20">
-              // 03 — Impact
+              {"// 03 — Impact"}
             </span>
           </motion.div>
           <motion.h2

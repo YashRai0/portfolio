@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Monitor, Server, Brain, Database, GitBranch, Wrench } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const techStack = [
   {
@@ -56,7 +55,7 @@ export default function Features() {
             className="flex items-center gap-4 mb-4"
           >
             <span className="font-mono text-sm text-[#3B82F6] bg-[#3B82F6]/10 px-3 py-1 rounded-full border border-[#3B82F6]/20">
-              // 04 — Tech Stack
+              {"// 04 — Tech Stack"}
             </span>
           </motion.div>
           <motion.h2

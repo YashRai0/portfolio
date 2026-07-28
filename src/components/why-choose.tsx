@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Rocket, Brain, Layers, Zap } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const features = [
   {
@@ -49,7 +48,7 @@ export function WhyChoose() {
     <section className="w-full py-24 bg-[#050709] px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <p className="font-mono text-[#4A5068] mb-4">// 03 — Why Me</p>
+          <p className="font-mono text-[#4A5068] mb-4">{"// 03 — Why Me"}</p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#F0F2F8]">
             Why work with <span className="text-[#00E5FF]">Yash</span>
           </h2>

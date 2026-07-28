@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Code, Server, Database, BrainCircuit, Activity } from "lucide-react";
+import { ExternalLink, Server, Database, BrainCircuit, Activity } from "lucide-react";
 import Link from "next/link";
 
 function GitHubIcon({ className = "w-4 h-4" }: { className?: string }) {
@@ -25,7 +25,7 @@ export default function Projects() {
             className="flex flex-col space-y-4"
           >
             <span className="font-mono text-sm text-[#7C3AED] font-semibold tracking-wider uppercase">
-              // 01 — Featured Work
+              {"// 01 — Featured Work"}
             </span>
             <h2 className="text-3xl md:text-5xl font-bold text-[#F9FAFB] tracking-tight">
               Production AI Case Studies

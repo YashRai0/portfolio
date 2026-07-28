@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CircleDot } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const timelineItems = [
   {
@@ -40,7 +39,7 @@ export default function Journey() {
             className="flex items-center gap-4 mb-4"
           >
             <span className="font-mono text-sm text-[#3B82F6] bg-[#3B82F6]/10 px-3 py-1 rounded-full border border-[#3B82F6]/20">
-              // 05 — Timeline
+              {"// 05 — Timeline"}
             </span>
           </motion.div>
           <motion.h2

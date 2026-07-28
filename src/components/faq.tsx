@@ -56,7 +56,7 @@ export function FAQ() {
           viewport={{ once: true, margin: "-50px" }}
           className="mb-16 text-center"
         >
-          <span className="font-mono text-[#4A5068] mb-4 block">// 07 — FAQ</span>
+          <span className="font-mono text-[#4A5068] mb-4 block">{"// 07 — FAQ"}</span>
           <h2 className="text-4xl md:text-5xl font-bold text-[#F0F2F8] font-sans">
             Frequently asked <span className="text-[#00E5FF]">questions</span>
           </h2>

@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, Cloud, Cpu, Workflow, Sparkles } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const certifications = [
   {
@@ -66,7 +65,7 @@ export default function Certifications() {
             className="flex items-center gap-4 mb-4"
           >
             <span className="font-mono text-sm text-[#3B82F6] bg-[#3B82F6]/10 px-3 py-1 rounded-full border border-[#3B82F6]/20">
-              // 02 — Credentials
+              {"// 02 — Credentials"}
             </span>
           </motion.div>
           <motion.h2

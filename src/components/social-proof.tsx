@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, ShieldCheck, Cpu, Code2 } from "lucide-react";
+import { ShieldCheck, Cpu, Code2 } from "lucide-react";
 
 const STATS = [
   { label: "Production SaaS", value: "2 Live", desc: "ResumeAI4U & AI Study Assistant" },

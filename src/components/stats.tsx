@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
 
 const stats = [
   { value: 2, suffix: "+", label: "Products Shipped" },
