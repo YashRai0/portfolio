@@ -7,9 +7,9 @@ export function getPersonSchema() {
     name: "Yash Rai",
     url: SITE_URL,
     image: `${SITE_URL}/og-image.png`,
-    jobTitle: "Full Stack Developer",
+    jobTitle: "AI Full Stack Developer",
     description:
-      "Full Stack Developer building AI-powered products with React, Node.js & TypeScript. Creator of Resume Optimizer.",
+      "AI Full Stack Developer building production-ready SaaS products with React, TypeScript, Node.js, Generative AI, Docker, and modern cloud technologies.",
     email: "yashrai6635@gmail.com",
     sameAs: [
       "https://github.com/YashRai0",
@@ -17,13 +17,20 @@ export function getPersonSchema() {
     ],
     knowsAbout: [
       "React",
-      "Next.js",
       "TypeScript",
       "Node.js",
-      "Python",
-      "AI/ML",
+      "Generative AI",
+      "RAG Pipelines",
+      "Docker",
+      "CI/CD",
+      "LangChain",
+      "OpenAI",
+      "Gemini",
+      "Claude",
       "Tailwind CSS",
       "Supabase",
+      "PostgreSQL",
+      "Prompt Engineering",
     ],
     alumniOf: {
       "@type": "EducationalOrganization",
@@ -41,10 +48,10 @@ export function getWebsiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Yash Rai — Full Stack Developer",
+    name: "Yash Rai — AI Full Stack Developer",
     url: SITE_URL,
     description:
-      "Portfolio of Yash Rai — Full Stack Developer building AI-powered products.",
+      "Portfolio of Yash Rai — AI Full Stack Developer building production-ready SaaS products.",
     author: {
       "@type": "Person",
       name: "Yash Rai",
@@ -72,42 +79,42 @@ export function getFAQSchema() {
     {
       question: "What does Yash Rai specialize in?",
       answer:
-        "Yash Rai specializes in full stack development with a focus on AI-powered products. He builds production-ready applications using React, Next.js, TypeScript, Node.js, and integrates AI APIs like Anthropic Claude and Groq for intelligent features.",
+        "Yash Rai is an AI Full Stack Developer who builds production-ready SaaS products. He specializes in React, TypeScript, Node.js, Generative AI (OpenAI, Gemini, Claude), RAG pipelines, Docker, and CI/CD. He focuses on building AI-powered applications that solve real-world problems.",
     },
     {
-      question: "What is Resume Optimizer?",
+      question: "What is ResumeAI4U?",
       answer:
-        "Resume Optimizer is a live SaaS product built by Yash Rai that helps job seekers beat ATS (Applicant Tracking System) filters. Users paste their resume and a job description to get an instant ATS score, keyword gap analysis, and line-by-line improvement suggestions. It's built with React, Node.js, Groq API, Razorpay, and Clerk.",
+        "ResumeAI4U is a live SaaS product built by Yash in 2026 that helps job seekers beat ATS filters. It uses Groq API for real-time resume analysis against job descriptions, providing instant ATS scores, keyword gap analysis, and line-by-line optimization. Built with React, Node.js, Groq API, Razorpay for payments, and Clerk for authentication.",
     },
     {
-      question: "What technologies does Yash use?",
+      question: "What is the AI Study Assistant?",
       answer:
-        "Yash works with React, Next.js, TypeScript, Tailwind CSS on the frontend; Node.js, Express, Supabase, MongoDB on the backend; Python, NumPy, Pandas, Scikit-learn for data & ML; and Anthropic Claude API, Groq API, RAG Pipelines for AI integration.",
+        "The AI Study Assistant is a live AI-powered study platform (ai-study-assistant-0.vercel.app) built in 2026. It transforms PDFs and notes into interactive learning experiences using RAG (Retrieval-Augmented Generation). Features include AI chat with your notes, smart summaries, flashcard generation, quiz creation, and progress tracking. Built with React, TypeScript, Node.js, and vector databases.",
     },
     {
-      question: "Is Yash available for freelance work?",
+      question: "What technologies does Yash work with?",
       answer:
-        "Yes, Yash is open to freelance projects, internships (remote or Prayagraj-based), part-time contracts, and AI product collaborations. He typically responds within 24 hours. Contact him at yashrai6635@gmail.com.",
+        "Frontend: React, TypeScript, JavaScript, Tailwind CSS. Backend: Node.js, Express. Database: Supabase, PostgreSQL. AI: OpenAI, Gemini, Claude, LangChain, Prompt Engineering. DevOps: Git, GitHub, Docker, CI/CD, Vercel. Tools: VS Code, Postman, Figma.",
     },
     {
-      question: "Where is Yash Rai based?",
+      question: "Is Yash available for internships?",
       answer:
-        "Yash Rai is based in Prayagraj, India. He is currently pursuing his BCA (Bachelor of Computer Applications) at United Institute of Management, FUGS. He is open to remote work opportunities worldwide.",
+        "Yes. Yash is actively seeking Software Engineering, AI, and Full Stack internships. He is open to remote positions or opportunities in Prayagraj, India. He has a proven track record of building production-ready AI products. Contact him at yashrai6635@gmail.com.",
     },
     {
-      question: "What is Yash's educational background?",
+      question: "What certifications does Yash have?",
       answer:
-        "Yash is a BCA (Bachelor of Computer Applications) student at United Institute of Management, FUGS in Prayagraj, currently in his 5th semester. He has earned an IBM SkillsBuild GenAI Badge and has deep knowledge of CS fundamentals including OS, DBMS, DSA, and Software Engineering.",
+        "Yash holds certifications in Oracle Cloud Infrastructure AI Foundations, IBM SkillsBuild Generative AI for Data Analytics, Microsoft Power Automate, and Prompt Engineering & Generative AI. These demonstrate his commitment to continuous learning in AI and cloud technologies.",
     },
     {
       question: "How can I contact Yash Rai?",
       answer:
-        "You can reach Yash via email at yashrai6635@gmail.com, through LinkedIn at linkedin.com/in/yash-rai-1a218433b, or check out his work on GitHub at github.com/YashRai0. He responds within 24 hours.",
+        "Email: yashrai6635@gmail.com. LinkedIn: linkedin.com/in/yash-rai-1a218433b. GitHub: github.com/YashRai0. He responds within 24 hours.",
     },
     {
-      question: "What kind of projects does Yash build?",
+      question: "What makes Yash different from other developers?",
       answer:
-        "Yash builds AI-powered web applications that solve real problems. His notable projects include Resume Optimizer (a live ATS optimization tool with payments) and AI Study Assistant (a RAG-powered PDF study tool in development). He focuses on shipping production-ready products, not just prototypes.",
+        "Yash ships production AI products, not just demos. He has a live SaaS with payments and auth (ResumeAI4U), understands full RAG pipeline architecture, uses modern DevOps (Docker, CI/CD), and holds industry certifications. He focuses on engineering decisions and real-world impact, not just listing technologies.",
     },
   ];
 
