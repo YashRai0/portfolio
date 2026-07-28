@@ -61,7 +61,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://yashrai.dev' }}
+          NEXT_PUBLIC_SITE_URL: "https://yashrai.dev"
 
   deploy-preview:
     name: Deploy Preview
