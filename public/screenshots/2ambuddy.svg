@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background:#0F1117;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;">
+  <defs>
+    <linearGradient id="prep-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141721" />
+      <stop offset="100%" stop-color="#0E1015" />
+    </linearGradient>
+    <linearGradient id="orange-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F05A28" />
+      <stop offset="100%" stop-color="#FF7A45" />
+    </linearGradient>
+  </defs>
+
+  <!-- Window Header -->
+  <rect width="1200" height="675" rx="14" fill="url(#prep-bg)"/>
+  <rect width="1200" height="48" rx="14" fill="#1A1D27"/>
+  <rect y="38" width="1200" height="10" fill="#1A1D27"/>
+  <line x1="0" y1="48" x2="1200" y2="48" stroke="#2B3040" stroke-width="1"/>
+
+  <!-- Window Controls -->
+  <circle cx="28" cy="24" r="6" fill="#FF5F56"/>
+  <circle cx="48" cy="24" r="6" fill="#FFBD2E"/>
+  <circle cx="68" cy="24" r="6" fill="#27C93F"/>
+
+  <!-- Address Bar -->
+  <rect x="360" y="10" width="480" height="28" rx="6" fill="#0F1117" stroke="#2B3040"/>
+  <text x="600" y="28" font-size="12" fill="#8E95A5" text-anchor="middle" font-family="'Geist Mono',monospace">2ambuddy.vercel.app</text>
+
+  <!-- Left Sidebar (Document & Navigation) -->
+  <rect x="0" y="48" width="280" height="627" fill="#141721"/>
+  <line x1="280" y1="48" x2="280" y2="675" stroke="#2B3040" stroke-width="1"/>
+
+  <!-- App Brand -->
+  <text x="24" y="86" font-size="18" font-weight="700" fill="#FFFFFF">2ambuddy<tspan fill="#F05A28">.</tspan></text>
+  <rect x="145" y="73" width="76" height="20" rx="4" fill="#F05A28" fill-opacity="0.15"/>
+  <text x="183" y="87" font-size="10" font-weight="600" fill="#F05A28" text-anchor="middle">RAG v1.2</text>
+
+  <!-- Uploaded Docs List -->
+  <text x="24" y="130" font-size="11" font-weight="600" fill="#6B7280" letter-spacing="1">STUDY MATERIAL</text>
+  <rect x="20" y="145" width="240" height="52" rx="8" fill="#1E2230" stroke="#F05A28" stroke-width="1"/>
+  <text x="36" y="168" font-size="13" font-weight="600" fill="#FFFFFF">Operating_Systems_Ch3.pdf</text>
+  <text x="36" y="186" font-size="11" fill="#9CA3AF">48 Pages · 128 Vector Chunks</text>
+
+  <rect x="20" y="208" width="240" height="46" rx="8" fill="#171A24" stroke="#2B3040"/>
+  <text x="36" y="230" font-size="12" fill="#D1D5DB">Computer_Networks_Unit2.pdf</text>
+  <text x="36" y="244" font-size="10" fill="#6B7280">32 Pages · Ready</text>
+
+  <!-- Modes in Sidebar -->
+  <text x="24" y="290" font-size="11" font-weight="600" fill="#6B7280" letter-spacing="1">STUDY MODES</text>
+  <rect x="20" y="305" width="240" height="38" rx="6" fill="#F05A28" fill-opacity="0.2"/>
+  <text x="36" y="329" font-size="13" font-weight="600" fill="#FF7A45">💬 Document Grounded Q&amp;A</text>
+
+  <rect x="20" y="352" width="240" height="38" rx="6" fill="transparent"/>
+  <text x="36" y="376" font-size="13" fill="#9CA3AF">⚡ Smart Flashcards (18)</text>
+
+  <rect x="20" y="399" width="240" height="38" rx="6" fill="transparent"/>
+  <text x="36" y="423" font-size="13" fill="#9CA3AF">📝 Chapter Summaries</text>
+
+  <rect x="20" y="446" width="240" height="38" rx="6" fill="transparent"/>
+  <text x="36" y="470" font-size="13" fill="#9CA3AF">🎯 Practice Quiz Generator</text>
+
+  <!-- Vector Engine Stats Badge -->
+  <rect x="20" y="590" width="240" height="60" rx="8" fill="#1A1E2B" stroke="#2B3040"/>
+  <text x="36" y="612" font-size="11" font-weight="600" fill="#F05A28">AI Pipeline Active</text>
+  <text x="36" y="632" font-size="10" fill="#9CA3AF">Groq LLaMA-3 · Embeddings: ON</text>
+
+  <!-- Main Content Area -->
+  <rect x="281" y="48" width="919" height="56" fill="#161922"/>
+  <line x1="281" y1="104" x2="1200" y2="104" stroke="#2B3040" stroke-width="1"/>
+  <text x="312" y="82" font-size="15" font-weight="600" fill="#FFFFFF">Operating Systems: Process Synchronization &amp; Semaphores</text>
+  <rect x="1060" y="66" width="108" height="28" rx="6" fill="#F05A28"/>
+  <text x="1114" y="84" font-size="11" font-weight="600" fill="#FFFFFF" text-anchor="middle">+ Upload PDF</text>
+
+  <!-- Chat History -->
+  <!-- User Message -->
+  <rect x="740" y="130" width="428" height="56" rx="12" fill="#F05A28" fill-opacity="0.15" stroke="#F05A28" stroke-width="1"/>
+  <text x="756" y="152" font-size="12" font-weight="600" fill="#FF8A50">Student Query:</text>
+  <text x="756" y="172" font-size="13" fill="#FFFFFF">Explain the difference between counting and binary semaphores.</text>
+
+  <!-- AI Grounded Answer -->
+  <rect x="312" y="206" width="560" height="200" rx="12" fill="#1A1E2A" stroke="#2B3040"/>
+  <circle cx="336" cy="230" r="12" fill="#F05A28"/>
+  <text x="336" y="235" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">AI</text>
+  <text x="360" y="234" font-size="13" font-weight="600" fill="#FFFFFF">2ambuddy Assistant</text>
+  <rect x="495" y="222" width="130" height="18" rx="4" fill="#242B3D"/>
+  <text x="560" y="235" font-size="10" fill="#60A5FA" text-anchor="middle">Grounded in Chapter 3, p. 74</text>
+
+  <text x="336" y="270" font-size="13" fill="#D1D5DB">Based on Section 3.4 of your uploaded notes:</text>
+  <text x="336" y="296" font-size="12" fill="#E5E7EB">• <tspan font-weight="600" fill="#FFFFFF">Binary Semaphore:</tspan> Value can range only between 0 and 1. Used as a mutual exclusion lock.</text>
+  <text x="336" y="324" font-size="12" fill="#E5E7EB">• <tspan font-weight="600" fill="#FFFFFF">Counting Semaphore:</tspan> Value can range over an unrestricted domain. Used to control access</text>
+  <text x="348" y="342" font-size="12" fill="#E5E7EB">to a given resource consisting of a finite number of instances.</text>
+  
+  <rect x="336" y="362" width="190" height="26" rx="4" fill="#131620" stroke="#2B3040"/>
+  <text x="346" y="379" font-size="11" fill="#F05A28">📌 Citation: OS_Ch3.pdf [Chunk #42]</text>
+
+  <!-- Flashcards Widget preview on Right -->
+  <rect x="896" y="206" width="272" height="290" rx="12" fill="#1A1E2A" stroke="#2B3040"/>
+  <text x="916" y="234" font-size="13" font-weight="600" fill="#FFFFFF">Generated Flashcards</text>
+  <text x="1136" y="234" font-size="11" fill="#F05A28" text-anchor="end">1 / 18</text>
+
+  <rect x="916" y="252" width="232" height="160" rx="10" fill="#131620" stroke="#374151"/>
+  <text x="932" y="280" font-size="11" font-weight="600" fill="#9CA3AF">CONCEPT CARD</text>
+  <text x="932" y="310" font-size="14" font-weight="600" fill="#FFFFFF">Critical Section Problem</text>
+  <text x="932" y="336" font-size="11" fill="#9CA3AF">What are the 3 mandatory</text>
+  <text x="932" y="352" font-size="11" fill="#9CA3AF">requirements for a solution?</text>
+
+  <rect x="916" y="430" width="110" height="34" rx="6" fill="#242B3D"/>
+  <text x="971" y="451" font-size="11" font-weight="600" fill="#D1D5DB" text-anchor="middle">Reveal Answer</text>
+  <rect x="1038" y="430" width="110" height="34" rx="6" fill="#F05A28"/>
+  <text x="1093" y="451" font-size="11" font-weight="600" fill="#FFFFFF" text-anchor="middle">Next Card →</text>
+
+  <!-- Bottom Input Bar -->
+  <rect x="312" y="605" width="856" height="50" rx="10" fill="#161922" stroke="#2B3040"/>
+  <text x="336" y="635" font-size="13" fill="#6B7280">Ask any question grounded in Operating_Systems_Ch3.pdf...</text>
+  <rect x="1080" y="613" width="76" height="34" rx="6" fill="#F05A28"/>
+  <text x="1118" y="634" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Send ↵</text>
+</svg>

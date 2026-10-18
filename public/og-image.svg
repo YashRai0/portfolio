@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      .bg { fill: #F7F6F2; }
+      .border-line { fill: none; stroke: #E5E2D9; stroke-width: 2; }
+      .pill-bg { fill: #F0EDE6; stroke: #E5E2D9; stroke-width: 1.5; rx: 8px; }
+      .text-primary { fill: #171717; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 800; }
+      .text-accent { fill: #F05A28; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 800; }
+      .text-muted { fill: #525252; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 400; }
+      .text-eyebrow { fill: #F05A28; font-family: "Geist Mono", monospace, monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.1em; }
+      .text-pill { fill: #171717; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 16px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" class="bg" />
+
+  <!-- Frame Border -->
+  <rect x="24" y="24" width="1152" height="582" rx="12" class="border-line" />
+
+  <!-- Brand -->
+  <text x="80" y="95" font-size="32" class="text-primary">YashRai<tspan class="text-accent">.</tspan></text>
+
+  <!-- Eyebrow -->
+  <text x="80" y="180" class="text-eyebrow">FULL-STACK · AI · PRODUCT ENGINEERING</text>
+
+  <!-- Main Title -->
+  <text x="80" y="250" font-size="52" class="text-primary">I build <tspan class="text-accent">intelligent products</tspan></text>
+  <text x="80" y="315" font-size="52" class="text-primary">that solve real problems.</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="390" font-size="22" class="text-muted">Yash Rai — BCA student and developer building web applications,</text>
+  <text x="80" y="425" font-size="22" class="text-muted">AI-powered tools, and practical software products.</text>
+
+  <!-- Featured Pill -->
+  <rect x="80" y="485" width="700" height="52" class="pill-bg" />
+  <text x="105" y="518" class="text-pill">Featured: Prepnexia (AI Study) · ResumeAI4u (ATS Optimizer)</text>
+
+  <!-- Domain -->
+  <text x="1000" y="518" font-size="24" class="text-accent">yashrai.cv</text>
+</svg>
