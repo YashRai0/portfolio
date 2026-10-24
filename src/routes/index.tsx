@@ -76,8 +76,8 @@ export function PortfolioHome() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredProjects.map((project, idx) => (
-              <ProjectCard key={project.id} project={project} priority={idx === 0} />
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </section>
