@@ -115,7 +115,12 @@ export function ResumeAI4uCaseStudy() {
           <img
             src="/screenshots/resumeai4u.svg"
             alt="ResumeAI4u ATS Analysis Dashboard"
+            width="1200"
+            height="675"
             className="w-full h-auto block"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
 

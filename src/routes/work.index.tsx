@@ -71,8 +71,8 @@ export function WorkPage() {
 
         {/* Project Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {projects.map((project, idx) => (
+            <ProjectCard key={project.id} project={project} priority={idx < 2} />
           ))}
         </div>
       </div>

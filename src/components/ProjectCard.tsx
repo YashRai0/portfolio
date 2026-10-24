@@ -5,9 +5,10 @@ import { GithubIcon } from './SocialIcons';
 
 interface Props {
   project: Project;
+  priority?: boolean;
 }
 
-export default function ProjectCard({ project }: Props) {
+export default function ProjectCard({ project, priority = false }: Props) {
   const hasLive = !!project.liveUrl && project.liveUrl !== '';
   const hasGithub = !!project.githubUrl && project.githubUrl !== '';
 
@@ -18,7 +19,11 @@ export default function ProjectCard({ project }: Props) {
         <img
           src={project.screenshot || '/screenshots/2ambuddy.svg'}
           alt={`${project.title} application interface screenshot`}
-          loading="lazy"
+          width={600}
+          height={338}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+          decoding="async"
         />
       </div>
 

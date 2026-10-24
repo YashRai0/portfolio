@@ -109,7 +109,12 @@ export function TwoAmBuddyCaseStudy() {
           <img
             src="/screenshots/2ambuddy.svg"
             alt="2ambuddy RAG Study Assistant Interface"
+            width="1200"
+            height="675"
             className="w-full h-auto block"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
 

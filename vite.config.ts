@@ -5,9 +5,17 @@ import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import { nitro } from 'nitro/vite'
 import tailwindcss from '@tailwindcss/vite'
 
+const isDev = process.env.NODE_ENV !== 'production'
+
 const config = defineConfig({
   resolve: { tsconfigPaths: true },
-  plugins: [tanstackStart(), nitro(), devtools(), tailwindcss(), react()],
+  plugins: [
+    tanstackStart(),
+    nitro(),
+    ...(isDev ? [devtools()] : []),
+    tailwindcss(),
+    react()
+  ],
 })
 
 export default config
